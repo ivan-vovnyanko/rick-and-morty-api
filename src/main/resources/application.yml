@@ -1,0 +1,25 @@
+spring:
+  jooq:
+    sql-dialect: org.hibernate.dialect.PostgreSQLDialect
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rickandmorty
+    username: postgres
+    password: 123456
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 20000
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-docs.html
+logging:
+  level:
+    root: info
+
+custom:
+  images-folder: /images
+  full-images-folder: src/main/resources/images

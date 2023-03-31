@@ -1,0 +1,3 @@
+INSERT INTO public.movie_character (id, name, status, gender, species, type, created) VALUES (1, 'Rick', 'single', 'male', '', '', 'now') ON CONFLICT DO NOTHING;
+INSERT INTO public.movie_character (id, name, status, gender, species, type, created) VALUES (2, 'Morty', 'single', 'male', '', '', 'now') ON CONFLICT DO NOTHING;
+INSERT INTO public.movie_character (id, name, status, gender, species, type, created) VALUES (3, 'Bath', 'married', 'female', '', '', 'now') ON CONFLICT DO NOTHING;
