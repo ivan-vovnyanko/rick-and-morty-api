@@ -12,14 +12,12 @@ It will be executed **automatically** when you **start the application** and **e
 - *All controllers* have their *own internal documentation* with ***swagger.***
 You can read it in **controller classes**, or by clicking on the ***<a href="http://localhost:8080/movie-characters/swagger-ui-docs.html">link</a>*** 
 *(the path can be changed in the **application.properties** file).*
-- The api is packaged in a ***Docker***, so the use will be **very simple.**
 
 ## Core technologies 💻
 - <h3>Spring (Boot, Web, Data)</h3>
 - <h3>PostgreSQL, Liquibase</h3>
 - <h3>Httpclient</h3>
 - <h3>Junit5, Mockito, Spring MockMVC, Testcontainers</h3>
-- <h3>Docker</h3>
 - <h3>Swagger</h3>
 
 ## Endpoints documentation ✴️
