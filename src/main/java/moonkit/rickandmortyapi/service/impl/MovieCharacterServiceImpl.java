@@ -1,5 +1,6 @@
 package moonkit.rickandmortyapi.service.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +19,8 @@ import moonkit.rickandmortyapi.service.utils.Downloader;
 import moonkit.rickandmortyapi.service.utils.HttpClient;
 import moonkit.rickandmortyapi.service.utils.SortUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -101,6 +104,12 @@ public class MovieCharacterServiceImpl implements MovieCharacterService {
     @Override
     public MovieCharacter getById(Long id) {
         return movieCharacterRepository.getReferenceById(id);
+    }
+
+    @Override
+    public Resource getResourceById(Long id) {
+        File file = new File(movieCharacterRepository.getReferenceById(id).getLocalImageUrl());
+        return new FileSystemResource(file);
     }
 
     private void saveDtosToDb(ApiResponseDto apiResponseDto) {

@@ -24,7 +24,8 @@ public class MovieCharacterMapper {
         movieCharacter.setSpecies(dto.getSpecies());
         movieCharacter.setCreated(dto.getCreated());
         movieCharacter.setType(dto.getType());
-        movieCharacter.setLocalImageUrl(File.separator + resourcesFolder + File.separator
+        movieCharacter.setLocalImageUrl("src" + File.separator + "main" + File.separator
+                + "resources" + File.separator + "images" + File.separator
                 + "character_images" + File.separator + dto.getId() + "."
                 + dto.getImage().split("\\.")[dto.getImage().split("\\.").length - 1]);
         return movieCharacter;

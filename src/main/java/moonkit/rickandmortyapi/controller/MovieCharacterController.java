@@ -2,6 +2,7 @@ package moonkit.rickandmortyapi.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import moonkit.rickandmortyapi.mapper.MovieCharacterMapper;
 import moonkit.rickandmortyapi.service.MovieCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -78,10 +80,10 @@ public class MovieCharacterController {
     @GetMapping("/image/{id}")
     public ResponseEntity<Resource> getImageById(
             @PathVariable @Parameter(description = "Character id") Long id) {
-        Resource file = new ClassPathResource(movieCharacterService.getById(id).getLocalImageUrl());
+        Resource resource = movieCharacterService.getResourceById(id);
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\""
-                        + file.getFilename() + "\"")
-                .body(file);
+                        + resource.getFilename() + "\"")
+                .body(resource);
     }
 }
