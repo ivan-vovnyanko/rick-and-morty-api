@@ -2,7 +2,6 @@ package moonkit.rickandmortyapi.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,8 +10,6 @@ import moonkit.rickandmortyapi.dto.MovieCharacterResponseDto;
 import moonkit.rickandmortyapi.mapper.MovieCharacterMapper;
 import moonkit.rickandmortyapi.service.MovieCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
