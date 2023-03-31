@@ -85,3 +85,9 @@ Representing ***a character*** in a **json object:**
 - **Url:** ***/movie-characters/image/{ID}***
 - This endpoint has **Path Variable - ID (Long).**
 - **All users have access** to this endpoint.
+
+# How to run 📖
+
+- **Download the project** from the *GitHub* <a href="https://github.com/ivan-vovnyanko/rick-and-morty-api/archive/refs/heads/master.zip">**link**</a> and **place it on your computer.**
+- Create a ***postgres database*** named *'rickandmorty'*
+- Run ***RickAndMortyApiApplication***
