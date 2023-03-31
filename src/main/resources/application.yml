@@ -21,5 +21,5 @@ logging:
     root: info
 
 custom:
-  images-folder: /images
+  images-folder: images
   full-images-folder: src/main/resources/images
